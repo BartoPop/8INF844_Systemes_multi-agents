@@ -1,0 +1,11 @@
+¬dernierCoup,¬touche=>random,purge,¬coule
+dernierCoup,¬coule,bougerHaut,haut=>tirerHaut,¬random,touche,¬purge
+dernierCoup,¬coule,bougerBas,bas=>tirerBas,¬random,touche,¬purge,¬haut
+dernierCoup,¬coule,bougerGauche,gauche=>tirerGauche,¬random,touche,¬purge,¬haut,¬bas
+dernierCoup,¬coule,bougerDroite,droite=>tirerDroite,¬random,touche,¬purge,¬haut,¬bas,¬gauche
+coule=>random,¬dernierCoup,haut,bas,gauche,droite,¬touche,purge
+touche,¬coule,tirerHaut=>revenir,¬tirerHaut,¬haut,¬random
+touche,¬coule,tirerBas=>revenir,¬tirerBas,¬bas,¬random,¬haut
+touche,¬coule,tirerGauche=>revenir,¬tirerGauche,¬gauche,¬random,¬haut,¬bas
+touche,¬coule,tirerDroite=>revenir,¬tirerDroite,¬droite,¬random,¬haut,¬bas,¬gauche
+revenir=>dernierCoup,¬revenir
